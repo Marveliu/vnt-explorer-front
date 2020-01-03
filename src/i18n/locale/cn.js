@@ -5,8 +5,8 @@ export default {
   rank: '#',
   confirmPage: '确定',
   /*
-  ** Prompt msg
-  */
+   ** Prompt msg
+   */
   copy: '复制成功!',
   pkErr: '打开钱包失败',
   invalidAddr: '地址格式错误',
@@ -14,8 +14,8 @@ export default {
   goBack: '返回',
 
   /*
-  ** Header Fields
-  */
+   ** Header Fields
+   */
   logoText: '维特链浏览器',
   vote: '节点投票',
   nav1: '区块链',
@@ -46,10 +46,17 @@ export default {
   nav5Sub1: '主网',
   nav5Sub2: '测试网',
   nav6Sub1: '简体中文',
+  nav7: '监管',
+  nav7Sub1: '合约汇报',
+  nav7Sub2: '业务合约',
+  nav7Sub3: '业务规则',
+
+
+
 
   /*
-  ** Home banner
-  */
+   ** Home banner
+   */
   hbFieldHeight: '区块高度',
   hbFieldTxCount: '交易数',
   hbFieldAccountCount: '总账户数',
@@ -61,8 +68,8 @@ export default {
   hbFieldUnit: ' 万',
   hbFieldFlag: '￥ ',
   /*
-  ** Home brief info box (left and right)
-  */
+   ** Home brief info box (left and right)
+   */
   lTitle: '最新出块',
   lField1: '查看全部 >',
   lField2: '交易数：',
@@ -78,20 +85,20 @@ export default {
   rField3: '接收方：',
   rField4: '价值：',
   /*
-  ** Home chart
-  */
+   ** Home chart
+   */
   chartTitle: 'VNT 14天内行情走势',
 
   /*
-  ** Create wallet
-  */
+   ** Create wallet
+   */
   CWBanner: '创建新的钱包',
   stage1: '输入密码',
   stage2: '保存文件',
   stage3: '保存私钥',
   /*
-  ** Create wallet stage1
-  */
+   ** Create wallet stage1
+   */
   st1Title: '请输入密码',
   st1Note1: '密码用于加密你的私钥，不作为生成私钥的种子',
   st1Note2: '你需要密码+私钥解锁你的钱包',
@@ -100,8 +107,8 @@ export default {
   st1NoteError2: '至少包含一个字母',
   st1Btn: '创建钱包',
   /*
-  ** Create wallet stage2
-  */
+   ** Create wallet stage2
+   */
   st2Title: '请保存你的Keystore文件',
   st2Note1: '请勿遗失Keystore文件，丢失后无法找回',
   st2Note2: '请勿分享Keystore文件，否则你的数字资产可能面临被盗风险',
@@ -109,8 +116,8 @@ export default {
   st2Btn1: '下载Keystore文件',
   st2Btn2: '我已下载，下一步',
   /*
-  ** Create wallet stage3
-  */
+   ** Create wallet stage3
+   */
   st3Title: '请保存你的私钥',
   st3Note1: '请勿遗失私钥，丢失后无法找回',
   st3Note2: '请勿分享私钥，否则您的数字资产可能面临被盗风险',
@@ -119,8 +126,8 @@ export default {
   st3Btn2: '全部就绪，进入账户页面',
 
   /*
-  ** Block list page
-  */
+   ** Block list page
+   */
   bdpHeader: '区块',
   blpTitle: '区块',
   blpSubTitle: num => `当前共${num}区块`,
@@ -132,8 +139,8 @@ export default {
   blpColumn6: '容量',
 
   /*
-  ** Block detail page
-  */
+   ** Block detail page
+   */
   bdpTitle: '区块编号',
   bdpField1: '时间戳',
   bdpField2: '交易',
@@ -147,8 +154,8 @@ export default {
   bdpField10: '额外数据',
   bdpField11: '见证人切换时间 ：',
   /*
-  ** Tx list page
-  */
+   ** Tx list page
+   */
   tlpTitle: '交易',
   tlpSubTitle: num => `当前共${num}交易`,
   tlpColumn1: '交易哈希值',
@@ -165,8 +172,8 @@ export default {
   tlpColumn01: '数量',
   contractToolTip: '合约',
   /*
-  ** Tx detail page
-  */
+   ** Tx detail page
+   */
   tdpTitle: '交易',
   tdpField1: '交易哈希值',
   tdpField2: '状态',
@@ -189,8 +196,8 @@ export default {
   tdpField17: '交易序号',
 
   /*
-  ** Account list page
-  */
+   ** Account list page
+   */
   alpTitle: '账户',
   alpSubTitle: num => `当前共${num}账户`,
   alpColumn1: '排名',
@@ -200,8 +207,8 @@ export default {
   alpColumn5: '交易数量',
 
   /*
-  ** Account detail page
-  */
+   ** Account detail page
+   */
   adpField1: '地址',
   adpField2: '余额',
   adpField3: '交易',
@@ -217,8 +224,8 @@ export default {
   adpCount3: num => `当前共${num}代币`,
 
   /*
-  ** Contract list page
-  */
+   ** Contract list page
+   */
   clpTitle: '合约',
   clpSubTitle: num => `当前共 ${num} 合约`,
   clpColumn1: '地址',
@@ -227,16 +234,16 @@ export default {
   clpColumn4: '交易数量',
 
   /*
-  ** Contract detail page
-  */
+   ** Contract detail page
+   */
   cdpTitle: '合约',
   cdpField1: '合约代码',
   cdpColumn3: '合约创建者：',
   cdpColumn4: '创建于交易：',
 
   /*
-  ** Token list page
-  */
+   ** Token list page
+   */
   tklpColumn0: '#',
   tklpTitle: '代币',
   tklpSubTitle: num => `当前共 ${num} 代币`,
@@ -249,8 +256,8 @@ export default {
   tklpColumn7: '官网:',
 
   /*
-  ** Token detail page
-  */
+   ** Token detail page
+   */
   tkdpField1: '合约代码',
   tkdpSubTitle: num => `当前共 ${num} 持有人`,
   tkdpField2: '持有人',
@@ -258,16 +265,16 @@ export default {
   tkdpField4: '百分比',
 
   /*
-  ** Token detail page - holders
-  */
+   ** Token detail page - holders
+   */
   tkdphField1: '排名',
   tkdphField2: '地址',
   tkdphField3: '数量',
   tkdphField4: '百分比',
 
   /*
-  ** Developer guide page
-  */
+   ** Developer guide page
+   */
   dgTitle: 'VNT开发者指南',
   dgNav1: 'VNT介绍',
   dgNav2: '网络搭建',
@@ -283,8 +290,8 @@ export default {
   dgNav7: '加入VNT Hubble主网',
 
   /*
-  ** Super Node page
-  */
+   ** Super Node page
+   */
   snTitle: '超级节点',
   snSubTitleComp1: '超级节点：',
   snSubTitleComp2: '候选节点：',
@@ -298,8 +305,8 @@ export default {
   snColumn5: '状态',
 
   /*
-  ** Test network faucet
-  */
+   ** Test network faucet
+   */
   tnfBanner: '测试网水龙头',
   tnfBannerSubTitle: '立即领取',
   tnfTitle: '填写测试网账户地址获得VNT测试币',
@@ -308,8 +315,8 @@ export default {
   successInfo: '提交成功，请在账户页面查询',
 
   /*
-  ** error message
-  */
+   ** error message
+   */
   system_err: '系统错误',
   wrong_address: '地址格式错误，请提供有效地址或',
   new_address: '创建一个新地址',
@@ -323,8 +330,8 @@ export default {
   not_found: '不存在',
 
   /*
-  ** Open wallet
-  */
+   ** Open wallet
+   */
   owBanner: '打开你的钱包',
   owTitle: '请选择打开钱包的方式：',
   owMethod1: 'Keystore 文件',
@@ -338,8 +345,8 @@ export default {
   owBtn: '打开钱包',
 
   /*
-  ** Wallet account
-  */
+   ** Wallet account
+   */
   waTitle: '钱包账户',
   waField1: '可用余额',
   waField2: '地址',
@@ -348,15 +355,15 @@ export default {
   waBtn2: '接收',
 
   /*
-  ** Receive page
-  */
+   ** Receive page
+   */
   rpBanner: '接收',
   rpTitle1: '钱包账户地址',
   rpTitle2: '地址二维码',
 
   /*
-  ** Send page
-  */
+   ** Send page
+   */
   spBanner: '发送',
   spTitle1: '钱包账户地址',
   spTitle2: '接收账户',
@@ -372,13 +379,13 @@ export default {
   spBtn2: '确认发送',
 
   /*
-  ** partners 
-  */
+   ** partners 
+   */
   partners: '合作伙伴',
 
   /*
-  ** footer 
-  */
+   ** footer 
+   */
   footerLogoText: '分布式智能价值网络',
   subscribe_hint: '订阅我们获取更多VNT Chain信息',
   footerPlaceholder: '邮件地址',
@@ -392,5 +399,29 @@ export default {
   nav_news: '新闻',
   nav_community: '社区',
   nav_cooperation: '合作',
-  nav_about: '关于我们'
+  nav_about: '关于我们',
+
+  /*
+   ** Report
+   */
+  repHeader: '区块',
+  repTitle: '监管消息',
+  repSubTitle: num => `当前共${num}条消息`,
+  repColumn1: '消息编号',
+  repColumn2: '区块',
+  repColumn3: '交易',
+  repColumn4: '合约地址',
+  repColumn5: '业务规则编号',
+  repColumn6: '时间',
+
+  /*
+   ** Block detail page
+   */
+  repdTitle: '消息编号',
+  repdField1: '时间戳',
+  repdField2: '区块号',
+  repdField3: '交易',
+  repdField4: '业务规则编码',
+  repdField5: '合约地址',
+  repdField6: '消息内容',
 }

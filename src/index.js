@@ -22,8 +22,8 @@ const routerMiddleware = RouterMiddleware(history)
 
 let mode = process.env.NODE_ENV // eslint-disable-line no-undef
 
-let middleware =
-  mode === 'development' ? [logger, routerMiddleware] : [routerMiddleware]
+let middleware = mode === 'development' ? [logger, routerMiddleware] : [routerMiddleware]
+
 const store = new Sirius({
   fileModels: {
     webpackContext: require.context('./models', true, /\.js$/)

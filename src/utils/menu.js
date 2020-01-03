@@ -1,9 +1,10 @@
 import r from 'constants/routes'
 import cnIcon from 'assets/images/cn.png'
 import enIcon from 'assets/images/en.png'
-const isMainNet = process.env.REACT_APP_NET === 'mainnet'
-
 import hotIcon from 'assets/images/hot.png'
+
+
+const isMainNet = process.env.REACT_APP_NET === 'mainnet'
 
 export const voteDetail = {
   title: 'vote',
@@ -118,6 +119,27 @@ const menu = [
         key: 'logout'
       }
     ]
+  },
+  {
+    title: 'nav7',
+    key: 'supervisor',
+    children: [
+      {
+        title: 'nav7Sub1',
+        key: 'reports',
+        path: r.reportList
+      },
+      {
+        title: 'nav7Sub2',
+        key: 'bizContract',
+        path: r.devGuides
+      },
+      {
+        title: 'nav7Sub3',
+        key: 'bizMeta',
+        path: r.devGuides
+      },
+    ]
   }
 ]
 
@@ -128,6 +150,7 @@ const faucetMenu = {
   key: 'faucet',
   path: r.faucet
 }
+
 const newMenu = []
 menu.map(item => {
   let tempObj = {}
@@ -137,6 +160,7 @@ menu.map(item => {
   }
   newMenu.push(tempObj)
 })
+
 export const testMenu = newMenu
 
 // menu for developer guide page

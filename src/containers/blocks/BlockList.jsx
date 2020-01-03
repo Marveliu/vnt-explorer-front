@@ -75,8 +75,8 @@ const genTableData = (data, lang) => {
         item.TxCount > 0 ? (
           <Link to={`${r.txList}/block=${item.Number}`}>{item.TxCount}</Link>
         ) : (
-          item.TxCount
-        ),
+            item.TxCount
+          ),
       producer: {
         addr: item.ProducerDetail.Address || item.Producer,
         name:

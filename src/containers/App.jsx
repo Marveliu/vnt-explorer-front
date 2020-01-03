@@ -9,11 +9,13 @@ import Home from 'containers/Home'
 
 import PageProvider from 'containers/PageProvider'
 import BlockList from 'containers/blocks/BlockList'
+import ReportList from 'containers/supervisor/ReportList'
 import TxList from 'containers/txs/TxList'
 import AccountList from 'containers/accounts/AccountList'
 import ContractList from 'containers/contracts/ContractList'
 import TokenList from 'containers/tokens/TokenList'
 
+import ReportDetail from 'containers/supervisor/ReportDetail'
 import BlockDetail from 'containers/blocks/BlockDetail'
 import TxDetail from 'containers/txs/TxDetail'
 import AccountDetail from 'containers/accounts/AccountDetail'
@@ -46,6 +48,7 @@ const mapStateToProps = ({ global: { isMobile } }) => {
 
 export default withRouter(
   connect(mapStateToProps)(function App(props) {
+
     const handleResize = () => {
       const clientWidth = Math.min(
         window.innerWidth,
@@ -74,9 +77,7 @@ export default withRouter(
 
     const { index: currentIndex, filterParam } = (() => {
       const a = location.pathname.split('/').filter(item => item)
-      let index = isNaN(parseInt(a[a.length - 1]))
-        ? 1
-        : parseInt(a[a.length - 1])
+      let index = isNaN(parseInt(a[a.length - 1])) ? 1 : parseInt(a[a.length - 1])
 
       let filterParam = ''
       if (
@@ -86,16 +87,16 @@ export default withRouter(
         filterParam = `&${a[1]}`
       }
       //console.log(a,index) //eslint-disable-line
-      if(index < 0){
+      if (index < 0) {
         a.pop()
         props.dispatch(replace(`/${a.join('/')}/1`))
         index = 1
       }
       return { index, filterParam }
     })()
+
     // 刷新时的 url 参数
-    const baseParams = `offset=${(currentIndex - 1) *
-      pageSize}&limit=${pageSize}`
+    const baseParams = `offset=${(currentIndex - 1) * pageSize}&limit=${pageSize}`
     // 返回除 offset 以为的请求 path
     const getBasePath = type => `${type}?limit=${pageSize}`
 
@@ -115,12 +116,11 @@ export default withRouter(
         )}
 
         <div className={styles.margin}>
-          <div
-            style={{
-              minHeight: location.pathname.startsWith(r.devGuides)
-                ? 'calc(100vh - 6rem)'
-                : 'calc(100vh - 5.18rem)'
-            }}
+          <div style={{
+            minHeight: location.pathname.startsWith(r.devGuides)
+              ? 'calc(100vh - 6rem)'
+              : 'calc(100vh - 5.18rem)'
+          }}
           >
             <Route exact path={r.home} component={Home} />
 
@@ -276,6 +276,37 @@ export default withRouter(
             />
             <Route path={`${r.tokenDetail}/:toke`} component={TokenDetail} />
 
+
+            <Route
+              path={r.reportList}
+              render={() => (
+                <DataProvider
+                  options={{
+                    path: `${apis.reports}?${baseParams}`,
+                    ns: 'reports',
+                    field: 'reports'
+                  }}
+                  render={data => (
+                    <PageProvider
+                      comp={ReportList}
+                      options={{
+                        basePath: `${getBasePath(apis.reports)}`,
+                        ns: 'reports',
+                        field: 'reports'
+                      }}
+                      refreshProof={true}
+                      redirectBase={r.reportList}
+                      context={data}
+                      currentIndex={currentIndex}
+                    />
+                  )}
+                />
+              )}
+            />
+            <Route path={`${r.reportDetail}/:report`} component={ReportDetail} />
+
+
+
             <Route path={r.nodeList} component={NodeList} />
             <Route path={r.devGuides} component={DevGuides} />
             <Route path={r.faucet} component={Faucet} />
@@ -285,6 +316,7 @@ export default withRouter(
             <Route exact path={r.receive} component={requireAuth(Receive)} />
             <Route exact path={r.send} component={requireAuth(Send)} />
             <Route exact path={r.wallet} component={requireAuth(Wallet)} />
+
           </div>
         </div>
 

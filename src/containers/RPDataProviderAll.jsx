@@ -7,6 +7,7 @@ const mapStateToProps = state => {
 }
 
 function RPDataProvider(props) {
+  
   const { optionsArr } = props
 
   // reducer管理状态，state会有引用问题？？？

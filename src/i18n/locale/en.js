@@ -47,6 +47,12 @@ export default {
   nav5: 'MainNet',
   nav5Sub1: 'MainNet',
   nav5Sub2: 'TestNet',
+  nav7: 'Supervisor',
+  nav7Sub1: 'Reports',
+  nav7Sub2: 'BizContract',
+  nav7Sub3: 'BizMeta',
+
+
   /*
  ** Home banner
  */

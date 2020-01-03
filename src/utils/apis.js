@@ -17,5 +17,7 @@ export default {
   nodes: '/nodes',
   nodesCount: '/nodes/count',
   faucet: '/hydrant',
-  subscribe: '/subscribe'
+  subscribe: '/subscribe',
+  reports: '/reports',
+  report: '/report',
 }

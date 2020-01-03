@@ -9,6 +9,7 @@ import { fixTwo, thousandth } from 'utils/helper'
 import styles from './BriefInfo.scss'
 
 export default withLang(function BriefInfo(props) {
+
   const formattedData = context => {
     const initial = {}
     if (context === null && typeof context === 'object') {
@@ -34,6 +35,7 @@ export default withLang(function BriefInfo(props) {
     SuperNode,
     CandiNode
   } = formattedData(stats)
+
   const {
     PriceCny,
     PriceUsd,
@@ -53,9 +55,9 @@ export default withLang(function BriefInfo(props) {
           <LocalText id={'hbFieldFlag'} />
           {props.language === 'cn' ? `${innerPriceCny}` : `${innerPriceUsd}`}
         </span>
-        <span
-          className={styles['brief-item__tiny']}
-        >{`${innerPercentChange24h > 0 ? '+' : ''}${innerPercentChange24h}%`}</span>
+        <span className={styles['brief-item__tiny']}>
+          {`${innerPercentChange24h > 0 ? '+' : ''}${innerPercentChange24h}%`}
+        </span>
       </div>
     )
   }
@@ -73,12 +75,12 @@ export default withLang(function BriefInfo(props) {
     MarketCapCny: isExist(MarketCapCny) ? (
       <Fragment>
         <LocalText id={'hbFieldFlag'} />
-        {props.language === 'cn' ? `${fixTwo(MarketCapCny/Math.pow(10, 4))}` : `${fixTwo(MarketCapUsd/Math.pow(10, 4))}`}
+        {props.language === 'cn' ? `${fixTwo(MarketCapCny / Math.pow(10, 4))}` : `${fixTwo(MarketCapUsd / Math.pow(10, 4))}`}
         <LocalText id={'hbFieldUnit'} />
       </Fragment>
     ) : (
-      '--'
-    ),
+        '--'
+      ),
     AvailableSupply: isExist(AvailableSupply) ? `${thousandth(AvailableSupply)} VNT` : '--',
     PriceCny: renderPriceCny(),
     SuperNode:

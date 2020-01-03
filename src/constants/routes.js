@@ -16,6 +16,10 @@ export default {
   tokenList: '/tokens',
   tokenDetail: '/token',
   nodeList: '/super-node',
+  reportList: '/reports',
+  reportDetail: '/report',
+
+
   devGuides: '/developer',
   faucet: '/faucet',
   vntOfficialWebsite: 'http://www.vntchain.io/',

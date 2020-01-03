@@ -7,13 +7,15 @@ const mapStateToProps = state => {
 }
 
 function RPDataProvider(props) {
+  
   const {
     options: { path, ns, field }
   } = props
 
   // 取 model 中的字段值（后端获取的数据）
-  //console.log('text-----',ns,field) //eslint-disable-line
+  console.log('text-----',ns,field) //eslint-disable-line
   const [context, setContext] = useState(props[props.options.ns][field])
+  
   useEffect(() => {
     props.dispatch({
       type: 'dataRelayNew/fetchData',
