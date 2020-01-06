@@ -20,4 +20,8 @@ export default {
   subscribe: '/subscribe',
   reports: '/reports',
   report: '/report',
+  bizMetas: '/bizMetas',
+  bizMeta: '/bizMeta',
+  bizContracts: '/bizContracts',
+  bizContract: '/bizContract',
 }

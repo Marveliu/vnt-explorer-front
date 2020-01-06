@@ -415,7 +415,7 @@ export default {
   repColumn6: '时间',
 
   /*
-   ** Block detail page
+   ** Report detail page
    */
   repdTitle: '消息编号',
   repdField1: '时间戳',
@@ -424,4 +424,61 @@ export default {
   repdField4: '业务规则编码',
   repdField5: '合约地址',
   repdField6: '消息内容',
+
+
+  /*
+   ** BizMeta
+   */
+  bmtHeader: '业务规则',
+  bmtTitle: '业务规则',
+  bmtSubTitle: num => `当前共${num}条业务规则`,
+  bmtColumn1: '业务规则编号',
+  bmtColumn2: '业务名称',
+  bmtColumn3: '业务类型',
+  bmtColumn4: '业务描述',
+  bmtColumn5: '业务监管消息定义',
+  bmtColumn6: '业务主要流程定义',
+  bmtColumn7: '创建时间',
+  
+
+  /*
+   ** BizMeta detail page
+   */
+  bmtdTitle: '业务规则',
+  bmtdField1: '业务规则编号',
+  bmtdField2: '业务名称',
+  bmtdField3: '业务类型',
+  bmtdField4: '业务描述',
+  bmtdField5: '业务监管消息定义',
+  bmtdField6: '业务主要流程定义',
+  bmtdField7: '创建时间',
+
+  /*
+   ** BizContract
+   */
+  bcHeader: '业务合约',
+  bcTitle: '业务合约',
+  bcSubTitle: num => `当前共${num}条业务合约`,
+  bcColumn1: '合约地址',
+  bcColumn2: '所有人',
+  bcColumn3: '合约名称',
+  bcColumn4: '描述',
+  bcColumn5: '状态',
+  bcColumn6: '业务规则',
+  bcColumn7: '创建时间',
+
+
+  /*
+   ** BizContract detail page
+   */
+  bcdTitle: '业务合约',
+  bcdField1: '时间戳',
+  bcdField2: '区块号',
+  bcdField3: '交易',
+  bcdField4: '业务规则编码',
+  bcdField5: '合约地址',
+  bcdField6: '消息内容',
+
+
+
 }

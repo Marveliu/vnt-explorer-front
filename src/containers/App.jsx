@@ -10,12 +10,15 @@ import Home from 'containers/Home'
 import PageProvider from 'containers/PageProvider'
 import BlockList from 'containers/blocks/BlockList'
 import ReportList from 'containers/supervisor/ReportList'
+import BizMetaList from 'containers/supervisor/BizMetaList'
+import BizContractList from 'containers/supervisor/BizContractList'
 import TxList from 'containers/txs/TxList'
 import AccountList from 'containers/accounts/AccountList'
 import ContractList from 'containers/contracts/ContractList'
 import TokenList from 'containers/tokens/TokenList'
 
 import ReportDetail from 'containers/supervisor/ReportDetail'
+import BizMetaDetail from 'containers/supervisor/BizMetaDetail'
 import BlockDetail from 'containers/blocks/BlockDetail'
 import TxDetail from 'containers/txs/TxDetail'
 import AccountDetail from 'containers/accounts/AccountDetail'
@@ -305,6 +308,60 @@ export default withRouter(
             />
             <Route path={`${r.reportDetail}/:report`} component={ReportDetail} />
 
+            <Route
+              path={r.bizMetaList}
+              render={() => (
+                <DataProvider
+                  options={{
+                    path: `${apis.bizMetas}?${baseParams}`,
+                    ns: 'bizMetas',
+                    field: 'bizMetas'
+                  }}
+                  render={data => (
+                    <PageProvider
+                      comp={BizMetaList}
+                      options={{
+                        basePath: `${getBasePath(apis.bizMetas)}`,
+                        ns: 'reports',
+                        field: 'reports'
+                      }}
+                      refreshProof={true}
+                      redirectBase={r.bizMetaList}
+                      context={data}
+                      currentIndex={currentIndex}
+                    />
+                  )}
+                />
+              )}
+            />
+            <Route path={`${r.bizMetaDetail}/:bizMeta`} component={BizMetaDetail} />
+
+            <Route
+              path={r.bizContractList}
+              render={() => (
+                <DataProvider
+                  options={{
+                    path: `${apis.bizContracts}?${baseParams}`,
+                    ns: 'bizContracts',
+                    field: 'bizContracts'
+                  }}
+                  render={data => (
+                    <PageProvider
+                      comp={BizContractList}
+                      options={{
+                        basePath: `${getBasePath(apis.bizContracts)}`,
+                        ns: 'bizContracts',
+                        field: 'bizContracts'
+                      }}
+                      refreshProof={true}
+                      redirectBase={r.bizContractList}
+                      context={data}
+                      currentIndex={currentIndex}
+                    />
+                  )}
+                />
+              )}
+            />
 
 
             <Route path={r.nodeList} component={NodeList} />

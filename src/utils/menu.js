@@ -132,12 +132,12 @@ const menu = [
       {
         title: 'nav7Sub2',
         key: 'bizContract',
-        path: r.devGuides
+        path: r.bizContractList
       },
       {
         title: 'nav7Sub3',
         key: 'bizMeta',
-        path: r.devGuides
+        path: r.bizMetaList
       },
     ]
   }

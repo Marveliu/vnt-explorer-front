@@ -18,6 +18,10 @@ export default {
   nodeList: '/super-node',
   reportList: '/reports',
   reportDetail: '/report',
+  bizMetaList: '/bizMetas',
+  bizMetaDetail: '/bizMeta',
+  bizContractList: '/bizContracts',
+  bizContractDetail: '/bizContract',
 
 
   devGuides: '/developer',
