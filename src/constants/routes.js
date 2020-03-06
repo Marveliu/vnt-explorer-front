@@ -22,6 +22,8 @@ export default {
   bizMetaDetail: '/bizMeta',
   bizContractList: '/bizContracts',
   bizContractDetail: '/bizContract',
+  detectList: '/detects',
+  detectDetail: '/detect',
 
 
   devGuides: '/developer',

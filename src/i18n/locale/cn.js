@@ -50,6 +50,8 @@ export default {
   nav7Sub1: '合约汇报',
   nav7Sub2: '业务合约',
   nav7Sub3: '业务规则',
+  nav8: '检测',
+  nav8Sub1: '用户行为检测',
 
 
 
@@ -427,7 +429,7 @@ export default {
 
 
   /*
-   ** BizMeta
+   ** BizMeta List page
    */
   bmtHeader: '业务规则',
   bmtTitle: '业务规则',
@@ -439,7 +441,7 @@ export default {
   bmtColumn5: '业务监管消息定义',
   bmtColumn6: '业务主要流程定义',
   bmtColumn7: '创建时间',
-  
+
 
   /*
    ** BizMeta detail page
@@ -479,6 +481,17 @@ export default {
   bcdField5: '合约地址',
   bcdField6: '消息内容',
 
-
+  /*
+   ** Detect List page
+   */
+  dtHeader: '异常检测',
+  dtTitle: '异常检测',
+  dtSubTitle: num => `当前共${num}条异常检测消息`,
+  dtColumn1: '检测编号',
+  dtColumn2: '关联账户',
+  dtColumn3: '异常分',
+  dtColumn4: '详情',
+  dtColumn5: '检测类型',
+  dtColumn6: '检测时间',
 
 }

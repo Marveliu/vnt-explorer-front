@@ -13,12 +13,10 @@ export const voteDetail = {
   key: 'vote'
 }
 
-const menu = [
-  {
+const menu = [{
     title: 'nav1',
     key: 'blockchain',
-    children: [
-      {
+    children: [{
         title: 'nav1Sub1',
         key: 'brief',
         path: r.home
@@ -55,50 +53,47 @@ const menu = [
       }
     ]
   },
-  {
-    title: 'nav2',
-    key: 'develop',
-    children: [
-      {
-        title: 'nav2Sub1',
-        key: 'devGuides',
-        path: r.devGuides
-      },
-      /* {
-        title: 'nav2Sub2',
-        key: 'chaincodeTools',
-        path: '/chaincode'
-      }, */
-      // {
-      //   title: 'nav2Sub3',
-      //   key: 'faucet',
-      //   path: r.faucet
-      // }
-    ]
-  },
-  {
-    title: 'nav3',
-    condition: false, // before auth
-    key: 'walletB',
-    children: [
-      {
-        title: 'nav3Sub1',
-        key: 'createWallet',
-        path: r['create-wallet']
-      },
-      {
-        title: 'nav3Sub2',
-        key: 'openWallet',
-        path: r['open-wallet']
-      }
-    ]
-  },
+  // {
+  //   title: 'nav2',
+  //   key: 'develop',
+  //   children: [{
+  //       title: 'nav2Sub1',
+  //       key: 'devGuides',
+  //       path: r.devGuides
+  //     },
+  //     /* {
+  //       title: 'nav2Sub2',
+  //       key: 'chaincodeTools',
+  //       path: '/chaincode'
+  //     }, */
+  //     // {
+  //     //   title: 'nav2Sub3',
+  //     //   key: 'faucet',
+  //     //   path: r.faucet
+  //     // }
+  //   ]
+  // },
+  // {
+  //   title: 'nav3',
+  //   condition: false, // before auth
+  //   key: 'walletB',
+  //   children: [{
+  //       title: 'nav3Sub1',
+  //       key: 'createWallet',
+  //       path: r['create-wallet']
+  //     },
+  //     {
+  //       title: 'nav3Sub2',
+  //       key: 'openWallet',
+  //       path: r['open-wallet']
+  //     }
+  //   ]
+  // },
   {
     title: 'nav3',
     condition: true, // after auth
     key: 'walletA',
-    children: [
-      {
+    children: [{
         title: 'nav3AuthSub1',
         key: 'wallet-account',
         path: r['wallet-account']
@@ -123,8 +118,7 @@ const menu = [
   {
     title: 'nav7',
     key: 'supervisor',
-    children: [
-      {
+    children: [{
         title: 'nav7Sub1',
         key: 'reports',
         path: r.reportList
@@ -140,7 +134,16 @@ const menu = [
         path: r.bizMetaList
       },
     ]
-  }
+  },
+  {
+    title: 'nav8',
+    key: 'abnormal',
+    children: [{
+      title: 'nav8Sub1',
+      key: 'detect',
+      path: r.detectList
+    }, ]
+  },
 ]
 
 export default menu
@@ -155,7 +158,7 @@ const newMenu = []
 menu.map(item => {
   let tempObj = {}
   tempObj = JSON.parse(JSON.stringify(item))
-  if(tempObj.key === 'develop'){
+  if (tempObj.key === 'develop') {
     tempObj.children.push(faucetMenu)
   }
   newMenu.push(tempObj)
@@ -164,8 +167,7 @@ menu.map(item => {
 export const testMenu = newMenu
 
 // menu for developer guide page
-export const devGuideMenu = [
-  {
+export const devGuideMenu = [{
     title: 'dgNav1',
     key: 'developer',
     path: '/developer'
@@ -213,8 +215,7 @@ export const devGuideMenu = [
   {
     title: 'dgNav6',
     key: 'extension',
-    children: [
-      {
+    children: [{
         title: 'dgNav6Sub1',
         key: 'install',
         path: '/developer/wallet/install'
@@ -231,8 +232,7 @@ export const devGuideMenu = [
 export const moreMenu = {
   title: 'nav4',
   key: 'more',
-  children: [
-    {
+  children: [{
       title: 'nav4Sub1',
       key: 'vntOfficialWebsite',
       path: r.vntOfficialWebsite,
@@ -256,8 +256,7 @@ export const moreMenu = {
 export const vntNetMenu = {
   title: isMainNet ? 'nav5Sub1' : 'nav5Sub2',
   key: 'vntNet',
-  children: [
-    {
+  children: [{
       title: isMainNet ? 'nav5Sub1' : 'nav5Sub2',
       key: 'first',
       path: isMainNet ? r.mainNet : r.testNet
@@ -273,8 +272,7 @@ export const vntNetMenu = {
 
 export const headerLang = {
   defaultValue: 'cn',
-  children: [
-    {
+  children: [{
       title: '简体中文',
       value: 'cn',
       key: 'cn',
@@ -289,8 +287,7 @@ export const headerLang = {
   ]
 }
 
-export const footerNav = [
-  {
+export const footerNav = [{
     title: 'nav_home',
     key: 'brief',
     path: r.home
@@ -333,8 +330,7 @@ export const footerNav = [
   }
 ]
 
-export const footerSocialData = [
-  {
+export const footerSocialData = [{
     title: 'GitHub',
     link: 'https://github.com/vntchain',
     img: require('../assets/images/footer/social1.png'),

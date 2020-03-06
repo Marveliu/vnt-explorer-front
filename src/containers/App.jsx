@@ -11,6 +11,7 @@ import PageProvider from 'containers/PageProvider'
 import BlockList from 'containers/blocks/BlockList'
 import ReportList from 'containers/supervisor/ReportList'
 import BizMetaList from 'containers/supervisor/BizMetaList'
+import DetectList from 'containers/supervisor/DetectList'
 import BizContractList from 'containers/supervisor/BizContractList'
 import TxList from 'containers/txs/TxList'
 import AccountList from 'containers/accounts/AccountList'
@@ -335,6 +336,35 @@ export default withRouter(
               )}
             />
             <Route path={`${r.bizMetaDetail}/:bizMeta`} component={BizMetaDetail} />
+
+            {/* 异常检测结果记录 */}
+            <Route
+              path={r.detectList}
+              render={() => (
+                <DataProvider
+                  options={{
+                    path: `${apis.detects}?${baseParams}`,
+                    ns: 'detects',
+                    field: 'detects'
+                  }}
+                  render={data => (
+                    <PageProvider
+                      comp={DetectList}
+                      options={{
+                        basePath: `${getBasePath(apis.detects)}`,
+                        ns: 'detects',
+                        field: 'detects'
+                      }}
+                      refreshProof={true}
+                      redirectBase={r.detectList}
+                      context={data}
+                      currentIndex={currentIndex}
+                    />
+                  )}
+                />
+              )}
+            />
+            
 
             <Route
               path={r.bizContractList}

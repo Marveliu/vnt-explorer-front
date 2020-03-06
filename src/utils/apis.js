@@ -22,6 +22,8 @@ export default {
   report: '/report',
   bizMetas: '/bizMetas',
   bizMeta: '/bizMeta',
+  detects: '/detects',
+  detect: '/detect',
   bizContracts: '/bizContracts',
   bizContract: '/bizContract',
 }
